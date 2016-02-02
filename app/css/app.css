@@ -75,3 +75,6 @@ select, textarea {
     left: 209px;
     background-color: #272b30;
 }
+body {
+  padding-top: 70px;
+}
