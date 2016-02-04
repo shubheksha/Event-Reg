@@ -16,21 +16,21 @@ eventsApp.controller('EventController', function($scope){
       {
         name: 'Directives Masterclass',
         creatorName: 'Bob Smith',
-        duration: '1hr',
+        duration: 1,
         level: 'Advanced',
         upvoteCount: 0
       },
       {
         name: 'Scope for Fun and Profit',
         creatorName: 'John Doe',
-        duration: '30min',
+        duration: 2,
         level: 'Introductory',
         upvoteCount: 0
       },
       {
         name: 'Well Behaved Controllers',
         creatorName: 'Jane Doe',
-        duration: '2hr',
+        duration: 4,
         level: 'Intermediate',
         upvoteCount: 0
 
