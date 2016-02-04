@@ -42,9 +42,22 @@
       </div>
     </div>
       <ul class="list-unstyled">
-        <li class="well" ng-repeat="session in event.sessions">
+        <li ng-repeat="session in event.sessions">
+            <div class="well votingWidget pull-left" style="margin-right: 2%">
+              <div class="votingButton" ng-click="upvoteSession(session)">
+              <span class="glyphicon glyphicon-chevron-up"></span>
+              </div>
+              <div style="padding: 1px">
+              <span class="badge">
+                {{session.upvoteCount}}
+              </span>
+            </div>
+              <div class="votingButton" ng-click="downvoteSession(session)">
+              <span class="glyphicon glyphicon-chevron-down"></span>
+              </div>
+            </div>
           <div class="row">
-            <div class="col-xs-10">
+            <div class=" well col-xs-10">
              <h4 class="well-title">{{session.name}}</h4>
               <strong>Creator: </strong>{{session.creatorName}} <br>
              <strong>Duration: </strong>{{session.duration}} <br>

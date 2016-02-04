@@ -20,13 +20,14 @@ select, textarea {
 }
 
 .votingWidget {
-  height: 64px;
-  padding: 7px;
+  padding: 0px 6px;
 }
 
 .votingButton {
-  padding-left:6px;
+  padding: 5px;
   cursor:pointer;
+  height: 5%;
+  margin: 0 auto;
 }
 
 .sessionThumbnail {
