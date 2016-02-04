@@ -44,4 +44,7 @@ eventsApp.controller('EventController', function($scope){
     session.upvoteCount--;
   }
 
+  $scope.sortOrder = 'name';
+  $scope.levels = '';
+
 });
