@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eventsApp">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+
+  <body ng-cloak>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="EventDetails.html">Home</a>
+          </li>
+          <li class="active">
+            <a href="#">Create Event</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container" ng-controller="EditEventController" style="padding-left:20px; padding-right: 10px; margin-bottom: 10px">
+      <h2>
+        New Event</h2>
+      <form role="form" class="form-horizontal">
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="eventName">
+            Name:
+          </label>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" required placeholder="Event Name" ng-model="event.name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="eventDate">Date:</label>
+          <div class="col-sm-2">
+            <input type="date" required class="form-control" placeholder="Date" ng-model="event.date">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="eventTime">Time:</label>
+          <div class="col-sm-2">
+            <input type="time" required class="form-control" placeholder="Time" ng-model="event.time">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="eventAddr">Adrress:</label>
+          <div class="col-sm-4">
+            <input type="text" required class="form-control" placeholder="Address" ng-model="event.location.address">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-1 col-sm-2">
+            <input type="text" required class="form-control" placeholder="City" ng-model="event.location.city">
+
+          </div>
+          <div class="col-sm-2">
+            <input type="text" required class="form-control" placeholder="Province" ng-model="event.location.province">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-1 control-label" for="img">Image:</label>
+          <div class="col-sm-3">
+              <input type="url" class="form-control" ng-model="event.imgUrl" placeholder="Image URL">
+          </div>
+          <img ng-src={{event.imgUrl}}>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-1 col-sm-1 col-xs-3">
+            <button class="btn btn-success">Submit!</button>
+          </div>
+          <div class="col-sm-1 col-xs-2">
+            <button class="btn btn-danger">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+  <script src="lib/underscore-1.4.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/bootstrap.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers/EventController.js"></script>
+  <script src="js/controllers/EditEventController.js"></script>
+  <script src="js/filters.js"></script>
+</body>
+
+</html>
