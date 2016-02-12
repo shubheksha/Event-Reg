@@ -9,42 +9,41 @@
 
 <body>
 
-  <div class="container">
+  <div class="container" ng-controller="EditProfileController">
     <div class="row">
-      <div class="pull-left col-sm-2" >
-        <img class="img-responsive"src="img/profile.jpg" alt="profile image">
+      <div class="pull-left col-sm-2 col-xs-3" >
+        <img class="img-responsive" ng-src="{{getGravatarUrl(user.email)}}" alt="profile image">
       </div>
-
-      <div class="col-sm-9 col-sm-offset-1">
+      <div class="col-sm-8 col-xs-7 col-sm-offset-1 col-xs-offset-1">
         <form role="form" name="editProfileForm" class="form-horizontal">
           <div class="form-group">
             <label class="control-label col-sm-2" for="username">Username:</label>
             <div class="col-sm-3">
-              <input type="text" class="form-control" name="username" placeholder="Username" required>
+              <input type="text" class="form-control" name="username" placeholder="Username" required ng-model = "user.username">
             </div>
           </div>
           <div class="form-group">
             <label class="col-sm-2 control-label" for="password">Password:</label>
             <div class="col-sm-3">
-              <input type="password" class="form-control" name="password" placeholder="Password" required>
+              <input type="password" class="form-control" name="password" placeholder="Password" required ng-model = "user.password">
             </div>
           </div>
           <div class="form-group">
             <label class="col-sm-2 control-label" for="name">Name:</label>
             <div class="col-sm-3">
-              <input type="text" class="form-control" name="name" placeholder="Name" required>
+              <input type="text" class="form-control" name="name" placeholder="Name" required ng-model = "user.name">
             </div>
           </div>
           <div class="form-group">
             <label class="col-sm-2 control-label" for="email">Email:</label>
             <div class="col-sm-5">
-              <input type="email" class="form-control" name="email" placeholder="Email">
+              <input type="email" class="form-control" name="email" placeholder="Email" ng-model = "user.email">
             </div>
           </div>
           <div class="form-group">
             <label class="col-sm-2 control-label" for="bio">Bio:</label>
             <div class="col-sm-5">
-              <textarea class="form-control" name="bio" placeholder="About yourself" rows="5"> </textarea>
+              <textarea class="form-control" name="bio" placeholder="About yourself" rows="5" ng-model = "user.bio"> </textarea>
             </div>
           </div>
         </form>
@@ -67,7 +66,7 @@
   <script src="js/controllers/EditProfileController.js"></script>
   <script src="js/filters.js"></script>
   <script src="lib/bootstrap.min.js"></script>
-
+  <script src="js/services/GravatarURLBuilder.js"></script>
 </body>
 
 </html>
