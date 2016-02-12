@@ -1,0 +1,73 @@
+<html lang="en" ng-app="eventsApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>Event Registration</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="pull-left col-sm-2" >
+        <img class="img-responsive"src="img/profile.jpg" alt="profile image">
+      </div>
+
+      <div class="col-sm-9 col-sm-offset-1">
+        <form role="form" name="editProfileForm" class="form-horizontal">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="username">Username:</label>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" name="username" placeholder="Username" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="password">Password:</label>
+            <div class="col-sm-3">
+              <input type="password" class="form-control" name="password" placeholder="Password" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="name">Name:</label>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" name="name" placeholder="Name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="email">Email:</label>
+            <div class="col-sm-5">
+              <input type="email" class="form-control" name="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="bio">Bio:</label>
+            <div class="col-sm-5">
+              <textarea class="form-control" name="bio" placeholder="About yourself" rows="5"> </textarea>
+            </div>
+          </div>
+        </form>
+        <div class="col-sm-offset-2">
+          <button class="btn btn-danger pull-left">Cancel</button>
+        </div>
+        <div class="col-sm-offset-6">
+          <button class="btn btn-success pull-left">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/underscore-1.4.4.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers/EditProfileController.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="lib/bootstrap.min.js"></script>
+
+</body>
+
+</html>
